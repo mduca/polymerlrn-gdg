@@ -2,7 +2,7 @@
 <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
 <link rel="import" href="../bower_components/google-map/google-map.html">
 
-<polymer-element name="my-element" noscript>
+<polymer-element name="my-element" attributes="city" noscript>
 
   <template>
     <core-ajax 
@@ -13,6 +13,26 @@
     </core-ajax>
 
     <style>
+        #over_map {
+          height: 250px;
+          width: 250px;
+          position: absolute;
+          top: 10px;
+          right:10px;
+          z-index: 99;
+          background-color: white;
+          opacity: 0.80;
+          padding: 15px;
+        }
+        #over_map h1 { 
+          text-align: center;
+          font-family: sans-serif;
+          text-shadow: 1px 1px 3px rgba(0,0,0,0.3)
+        }
+        #over_map input {
+          text-align: center;  
+          width: 100%;
+        }
         google-map {
           height: 100%;
           width: 100%;
@@ -23,6 +43,13 @@
     </style>
     <google-map disableDefaultUI showCenterMarker  zoom="15" latitude="{{resp.coord.lat}}" longitude="{{resp.coord.lon}}"></google-map>
 
+      <div id="over_map">
+        <h1>{{resp.name}}</h1><br />
+        Description: {{resp.weather[0].description}}<br />
+        Humidity: {{resp.main.humidity}}
+<br /><br /><br />
+        <input value="Enter your City to find the weather"></input>
+      </div>
   </template>
 
 </polymer-element>
