@@ -1,0 +1,20 @@
+{
+  "name": "polymerlrn",
+  "version": "0.0.0",
+  "authors": [
+    "Michael Manduca <michael@mandu.ca>"
+  ],
+  "description": "Learning polymer tutorial",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.5"
+  }
+}

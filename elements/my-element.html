@@ -1,0 +1,14 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="my-element" noscript>
+  <template>
+    <span>I'm <b>my-element</b>. This is my Shadow DOM.</span>
+    <core-ajax 
+      url="http://api.openweathermap.org/data/2.5/weather?q=Berkeley,us"
+      auto response="{{weather}}">
+    </core-ajax>
+    <textarea value="{{weather}}"></textarea>
+  </template>
+</polymer-element>
+
