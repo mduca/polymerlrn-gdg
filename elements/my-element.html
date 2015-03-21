@@ -1,14 +1,28 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+<link rel="import" href="../bower_components/google-map/google-map.html">
 
 <polymer-element name="my-element" noscript>
-  <template>
-    <span>I'm <b>my-element</b>. This is my Shadow DOM.</span>
-    <core-ajax 
-      url="http://api.openweathermap.org/data/2.5/weather?q=Berkeley,us"
-      auto response="{{weather}}">
-    </core-ajax>
-    <textarea value="{{weather}}"></textarea>
-  </template>
-</polymer-element>
 
+  <template>
+    <core-ajax 
+      url="http://api.openweathermap.org/data/2.5/weather?q=Berkeley,us" 
+      response="{{resp}}"
+      handleAs="json"
+      auto>
+    </core-ajax>
+
+    <style>
+        google-map {
+          height: 100%;
+          width: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
+    </style>
+    <google-map disableDefaultUI showCenterMarker  zoom="15" latitude="{{resp.coord.lat}}" longitude="{{resp.coord.lon}}"></google-map>
+
+  </template>
+
+</polymer-element>
