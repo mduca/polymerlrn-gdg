@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-# Learning polymer with Google Development Group Berkeley 
+# Learning Polymer 
+##with Google Development Group Berkeley 
 
-##Install
+###Install
 
 ```
 git clone http://github.com/mduca/polymerlrn-gdg.git
