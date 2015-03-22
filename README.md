@@ -13,6 +13,6 @@ This project uses Polymer core-ajax and GoogleWebComponents google-map. View bow
 
 ###Useing:
 
- *Polymer "~0.5.5"
- *GoogleWebComponents google-map "~0.4.2"
- *Polymer core-ajax "~0.5.5"
+ * Polymer "~0.5.5"
+ * GoogleWebComponents google-map "~0.4.2"
+ * Polymer core-ajax "~0.5.5"
