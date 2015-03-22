@@ -6,7 +6,7 @@
 
   <template>
     <core-ajax 
-      url="http://api.openweathermap.org/data/2.5/weather?q=Berkeley,us" 
+    url="http://api.openweathermap.org/data/2.5/weather?q={{city}},us" 
       response="{{resp}}"
       handleAs="json"
       auto>
@@ -41,14 +41,15 @@
           top: 0;
         }
     </style>
+
     <google-map disableDefaultUI showCenterMarker  zoom="15" latitude="{{resp.coord.lat}}" longitude="{{resp.coord.lon}}"></google-map>
 
       <div id="over_map">
         <h1>{{resp.name}}</h1><br />
         Description: {{resp.weather[0].description}}<br />
         Humidity: {{resp.main.humidity}}
-<br /><br /><br />
-        <input value="Enter your City to find the weather"></input>
+        <br /><br /><br />
+        <input placeholder="Search your city and press enter"></input>
       </div>
   </template>
 
